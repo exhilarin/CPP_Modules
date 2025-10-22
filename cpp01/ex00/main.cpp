@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilyas-guney <ilyas-guney@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 00:47:54 by ilyas-guney       #+#    #+#             */
-/*   Updated: 2025/09/30 15:38:37 by ilyas-guney      ###   ########.fr       */
+/*   Created: 2025/09/28 19:49:02 by ilyas-guney       #+#    #+#             */
+/*   Updated: 2025/09/28 21:06:05 by ilyas-guney      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#include "Zombie.hpp"
 
-# include "Weapon.hpp"
-
-class HumanA
+int main(void)
 {
-    private:
-        std::string name;
-        Weapon &weapon;
-
-    public:
-        HumanA(std::string name, Weapon &weapon) 
-            : name(name), weapon(weapon) {}
-        void attack();
-};
-
-
-#endif
+    Zombie *heapZombie = newZombie("HeapZ");
+    heapZombie->announce();
+    randomChump("StackZ");
+    delete heapZombie;
+    return 0;
+}
