@@ -1,8 +1,10 @@
 
-#ifndef HARL_H
-# define HARL_H
+#ifndef HARL_HPP
+# define HARL_HPP
 
 #include <iostream>
+
+enum Message {DEBUG, INFO, WARNING, ERROR};
 
 class Harl
 {
@@ -12,7 +14,7 @@ class Harl
         void warning(void);
         void error(void);
     public:
-        void complain(std::string level);
+        void complain(Message level);
 };
 
 #endif
