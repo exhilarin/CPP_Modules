@@ -25,7 +25,6 @@ class Fixed
         float   toFloat(void) const;
         int     toInt(void) const;
 
-        // Comparison operators
         bool    operator>(const Fixed &otherClass) const;
         bool    operator<(const Fixed &otherClass) const;
         bool    operator>=(const Fixed &otherClass) const;
@@ -33,19 +32,16 @@ class Fixed
         bool    operator==(const Fixed &otherClass) const;
         bool    operator!=(const Fixed &otherClass) const;
 
-        // Arithmetic operators
         Fixed   operator+(const Fixed &otherClass) const;
         Fixed   operator-(const Fixed &otherClass) const;
         Fixed   operator*(const Fixed &otherClass) const;
         Fixed   operator/(const Fixed &otherClass) const;
 
-        // Increment / Decrement
         Fixed &operator++();
         Fixed operator++(int);
         Fixed &operator--();
         Fixed operator--(int);
 
-        // Static min / max
         static Fixed &min(Fixed &a, Fixed &b);
         static const Fixed &min(const Fixed &a, const Fixed &b);
         static Fixed &max(Fixed &a, Fixed &b);
